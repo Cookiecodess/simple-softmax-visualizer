@@ -212,6 +212,12 @@ main {
   height: 95%;
   background-color: #fff8;
 }
+.spinner > button:hover {
+  background-color: #fff4;
+}
+.spinner > button:active {
+  background-color: #fff3;
+}
 
 .output-container {
   /* flex-grow: 1; */
