@@ -232,7 +232,7 @@ main {
   align-items: center;
   justify-content: space-between;
 
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   /* gap: 5%; */
 }
@@ -301,7 +301,7 @@ main {
 #softmax-equation {
   /* width: 800px;
   margin: 0 auto; */
-  overflow-x: scroll;
+  overflow-x: auto;
   margin-top: 20px;
 }
 
