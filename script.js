@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", e => {
 });
 
 const renderMain = () => {
+  console.log(`At start of renderMain(), inputArr: ${inputArr}`);
   main.innerHTML = ""; // clear <main> 
 
   if (inputCount === 0) {
@@ -154,7 +155,8 @@ const formatNum = (num) => {
 }
 
 const runSoftmax = () => {
-  const inputArr = getInputArray();
+  inputArr = getInputArray();
+  console.log(`Got inputArr from getInputArray(): ${inputArr}`);
   const outputArr = calcSoftmaxOutputs(inputArr);
   displayOutputs(outputArr);
 }
@@ -172,7 +174,7 @@ const getInputArray = () => {
 // return an Array of outputs (probabilities)
 // n = e^n / sum for each n in arr
 const calcSoftmaxOutputs = (inputArr) => {
-  let arr = inputArr;
+  let arr = structuredClone(inputArr);
   // create array of x number of objects
   
   arr.forEach((n, i, arr) => {
